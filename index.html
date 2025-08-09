@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-8">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 w-full max-w-2xl text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">Halo kami dari kelompok 4</h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-8">
+            Berikut adalah contoh tombol-tombol yang dibuat menggunakan JavaScript
+        </p>
+
+        <div id="button-container" class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+        </div>
+    </div>
+
+    <script>
+
+        function createButton(text, onClickHandler) {
+            const button = document.createElement('button');
+            button.textContent = text;
+            button.onclick = onClickHandler;
+
+            button.className = "bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105";
+
+            return button;
+        }
+
+        const buttonContainer = document.getElementById('button-container');
+
+        function handleHaloClick() {
+            alert('Halo, React!');
+        }
+
+        function handlePrimaryClick() {
+            alert('Tombol Utama diklik!');
+        }
+
+        function handleSecondaryClick() {
+            alert('Tombol Sekunder diklik!');
+        }
+        
+        function handleOtherClick() {
+            alert('Tombol Lainnya diklik!');
+        }
+
+        buttonContainer.appendChild(createButton("Halo", handleHaloClick));
+    </script>
+
+</body>
+</html>
